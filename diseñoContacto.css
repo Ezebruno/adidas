@@ -1,0 +1,33 @@
+body{
+    background-color:rgb(198, 221, 243);
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family:'Courier New', Courier, monospace;
+}
+
+.boton-inicio {
+    background-color: #000;
+    font-size: 20px;
+    margin: 20px 0 0 0; /* Margen superior de 20px */
+    padding: 10px;
+    color: #ccc;
+    text-decoration: none;
+    text-align: center;
+}
+
+
+.container-icon {
+    display: flex;
+    justify-content: flex-start; /* Alinea la imagen a la izquierda */
+    align-items: flex-start;     /* Alinea la imagen arriba */
+    width: 75px;
+    height: 75px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.container-icon img {
+    width: 100%; /* Ajusta la imagen al tamaño del contenedor si es necesario */
+    height: auto;
+    object-fit: contain; /* Evita que la imagen se distorsione */
+}

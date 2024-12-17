@@ -1,0 +1,342 @@
+*::after, *::before, *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*header {
+    position: fixed; /* Hace que el header quede fijo 
+    top: 0;          /* Fija el header en la parte superior 
+    width: 97%;     /* Hace que el header ocupe todo el ancho 
+    padding: 10px 20px;
+    z-index: 1000;   /* Asegura que el header esté por encima de otros elementos 
+    
+}*/
+
+body{
+    max-width: 1200px;
+    font-family:'Courier New', Courier, monospace;
+    margin: 0 auto;
+    color: rgb(0, 0, 0);
+    background-color:rgb(198, 221, 243);
+}
+
+nav{
+    max-width: 1000px;
+    margin: auto;
+    background-color: rgb(0, 0, 0);
+    font-size: 20px;
+    margin-top: 50px;
+}
+
+.menu-horizontal{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu-horizontal > li > a{
+    display: block;
+    padding: 15px 45px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.menu-horizontal > li:hover{
+    background-color: #84b9f3;
+}
+
+.menu-vertical{
+    position:absolute;
+    display: none;
+    list-style: none;
+    width: 150px;
+    background-color: #84b9f3;
+}
+
+.menu-horizontal li:hover .menu-vertical{
+    display: block;
+}
+
+.menu-vertical li:hover{
+    background-color: rgb(198, 221, 243);
+}
+
+.menu-vertical li a{
+    display: block;
+    color: rgb(255, 255, 255);
+    padding: 15px 15px 15px 20px;
+    text-decoration: none;
+}
+
+.icon-cart{
+    width: 40px;
+    height: 40px;
+    stroke: #000;
+}
+
+.icon-cart:hover{
+    cursor: pointer;
+}
+
+img{
+    max-width: 100%;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0 40px 0;
+}
+
+.container-icon{
+    position: relative;
+}
+
+.count-product{
+    position: absolute;
+    top: 55%;
+    right: 0;
+    background-color: #000;
+    color: #fff;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+#contador-productos{
+    font-size: 14;
+}
+
+.container-cart-products{
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: rgb(218, 232, 245);
+    width: 400px;
+    z-index: 1;
+    box-shadow: 0 10px 20px rgba(0,0,0,20);
+    border-radius: 10px;
+}
+
+.icon-close{
+    width: 25px;
+    height: 25px;
+}
+
+.icon-close:hover{
+    stroke: red;
+    cursor: pointer;
+}
+
+.cart-product{
+    display: flex;
+    padding: 30px;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(0,0,0,20);
+    align-items: center;
+}
+
+.info-cart-product{
+    display: flex;
+    justify-content: space-between;
+    flex: 0.8;
+}
+
+.titulo-producto-carrito{
+    font-size: 20px;
+}
+
+.precio-producto-carrito{
+    font-weight: 700;
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+.cantidad-producto-carrito{
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.cart-total{
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    gap: 20px;
+    align-items: center;
+}
+.cart-total h3{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.total-pagar{
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.hidden-cart{
+    display: none;
+}
+
+.container-items{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.item{
+    border-radius: 10px;
+}
+
+.item:hover{
+    box-shadow: 0 10px 20px rgba(0,0,0,20);
+}
+
+.info-producto{
+    padding: 15px 30px;
+    line-height: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.item img{
+    width: 100%;
+    height: 300%;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    transition: all .5s;
+}
+
+.item figure{
+    overflow: hidden;
+}
+
+.item:hover img{
+    transform: scale(1.2);
+}
+
+.precio{
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.info-producto button{
+    border: none;
+    background: none;
+    background-color: black;
+    color: rgb(255, 255, 255);
+    padding: 15px 10px;
+    cursor: pointer;
+}
+
+.info-producto button:hover{
+    background-color: #84b9f3;
+}
+
+.cart-empty{
+    padding: 20px;
+    text-align: center;
+}
+
+.search-bar{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.search-bar input{
+    width: 50%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.search-bar button{
+    padding: 10px 20px;
+    margin-left: 10px;
+    font-size: 16px;
+    color: white;
+    background-color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.search-bar button:hover{
+    background-color: #84b9f3;
+}
+
+#no-results-message {
+    color: rgb(0, 0, 0);
+    font-size: 1.3em;
+    margin-top: 20px;
+    text-align: center;
+}
+
+
+.container-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75px;
+    height: 75px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.imagen-fondo {
+    display: flex; /* Usar flexbox para centrar */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 100vh; /* Altura completa de la ventana */
+     /* Fondo claro para contraste */
+}
+
+.imagen-fondo img {
+    max-width: 90%; /* Escala la imagen según el ancho disponible */
+    height: 100%; /* Mantiene la proporción de la imagen */
+    border-radius: 10px; /* Bordes redondeados (opcional) */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
+}
+
+/* Estilo del footer */
+footer {
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    padding: 25px 0;
+    margin-top: auto;
+}
+
+footer .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+footer nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+footer nav ul li {
+    display: inline;
+}
+
+footer nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+footer nav ul li a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda</title>
+    <link rel="stylesheet" href="diseño.css">
+    <link rel="icon" type="image/png" href="Img/icon/adidas.png">
+</head>
+<body>
+    <header>
+        <div class="container-icon">
+            <a href="https://www.adidas.com.ar/?cm_mmc=AdieSEM_Google-_-adidas-LAM-AR-Trademark-adidas-General-B-Exact-_-Trademark-adidas-X-General-_-adidas-_--_-dv:eCom-_-&cm_mmca1=AR-_-&cm_mmc2=-_-ds_kid=43700080577701812-_-ds_agid=58700008751312262&af_reengagement_window=30d&is_retargeting=true&pid=googleadwords_temp&c=adidas-LAM-AR-Trademark-adidas-General-B-Exact&af_channel=Search&gad_source=1&gclid=Cj0KCQiAsOq6BhDuARIsAGQ4-zhm6y1wCNzzOEEl_05IsvtxDTne8evGMFkV64-0-cREEfM5S4wkizoaAvOyEALw_wcB&gclsrc=aw.ds" title="adidas iconos">
+                <img src="Img/icon/adidas.png" alt="adidas">
+            </a>
+        </div>
+        <nav>
+            <ul class="menu-horizontal">
+                <li><a href="#">Inicio</a></li>
+                <li>
+                    <a href="#">Hombre</a>
+                    <ul class="menu-vertical">
+                        <li><a href="categorias/hombre/hombreRopa.html" class="boton">Ropa</a></li>
+                        <li><a href="categorias/hombre/hombreCalzado.html" class="boton">Calzado</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Mujer</a>
+                    <ul class="menu-vertical">
+                        <li><a href="categorias/mujer/mujerRopa.html" class="boton">Ropa</a></li>
+                        <li><a href="categorias/mujer/mujerCalzado.html" class="boton">Calzado</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Niños</a>
+                    <ul class="menu-vertical">
+                        <li><a href="categorias/niños/ropaNiños.html">Ropa Niños</a></li>
+                        <li><a href="categorias/niñas/ropaNiñas.html">Ropa Niñas</a></li>
+                        <li><a href="categorias/niños/calzadoNiños.html">Calzado Niños</a></li>
+                        <li><a href="categorias/niñas/calzadoNiñas.html">Calzado Niñas</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        
+        <div class="container-icon">
+
+            <div class="container-cart-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-cart">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                </svg>
+                <div class="count-product">
+                    <span id="contador-productos">0</span>
+                </div>
+            </div>
+            <div class="container-cart-products hidden-cart">
+                <div class="row-product">
+                    <div class="cart-product">
+                        <div class="info-cart-product">
+                            <span class="cantidad-producto-carrito">1</span>
+                            <p class="titulo-producto-carrito">Producto1</p>
+                            <span class="precio-producto-carrito">$10</span>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-close">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                        </svg>                      
+                    </div>
+                </div>
+                <div class="cart-total">
+                    <h3>Total: </h3>
+                    <span class="total-pagar">$10</span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <p>&nbsp;&nbsp;&nbsp;</p>
+    <p>&nbsp;&nbsp;&nbsp;</p>
+    <p>&nbsp;&nbsp;&nbsp;</p>
+    <div class="search-bar">
+        <input type="text" id="search" placeholder="Buscar..." oninput="buscarProducto()">
+        <button onclick="buscarProducto()">Buscar</button>
+    </div>
+    <!-- Este es un comentario -->
+    <!--
+    <div class="imagen-fondo">
+        <img src="Img/me.webp" alt="Campeon">
+    </div>
+    -->
+    <p>&nbsp;&nbsp;&nbsp;</p>
+    <h2>🔥Ofertas🔥</h2>
+    <p>&nbsp;&nbsp;&nbsp;</p>
+    <p>&nbsp;&nbsp;&nbsp;</p>
+
+    <div class="container-items">
+        <div class="item">
+            <figure>
+                <img src="Img/1.avif" alt="producto">
+            </figure>
+            <div class="info-producto">
+                <h2>Zapatillas Grand Curt Lifestyle</h2>
+                <p class="precio">$78.999</p>
+                <button class="btn-add-cart">Añadir al Carrito</button>
+            </div>
+        </div>
+        <div class="item">
+            <figure>
+                <img src="Img/2.avif" alt="producto">
+            </figure>
+            <div class="info-producto">
+                <h2>Zapatillas Samba OG</h2>
+                <p class="precio">$108.999</p>
+                <button class="btn-add-cart">Añadir al Carrito</button>
+            </div>
+        </div>
+        <div class="item">
+            <figure>
+                <img src="Img/3.avif" alt="producto">
+            </figure>
+            <div class="info-producto">
+                <h2>Zapatillas Grand Court TD Lifestyle</h2>
+                <p class="precio">$89.999</p>
+                <button class="btn-add-cart">Añadir al Carrito</button>
+            </div>
+        </div>
+        <div class="item">
+            <figure>
+                <img src="Img/4.webp" alt="producto">
+            </figure>
+            <div class="info-producto">
+                <h2>Zapatillas Samba ADV</h2>
+                <p class="precio">$189.999</p>
+                <button class="btn-add-cart">Añadir al Carrito</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Sitio Web. Todos los derechos reservados.</p>
+            <nav>
+                <ul>
+                    <li><a href="#about">Acerca de - </a></li>
+                    <li><a href="contacto.html">Contacto - </a></li>
+                    <li><a href="politicasDePrivacidad.html">Política de privacidad - </a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
